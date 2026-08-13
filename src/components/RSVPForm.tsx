@@ -30,6 +30,7 @@ export const RSVPForm: React.FC = () => {
         name, 
         status, 
         message,
+        link: window.location.href,
         submittedAt: new Date().toISOString() 
       });
       setSubmitted(true);
