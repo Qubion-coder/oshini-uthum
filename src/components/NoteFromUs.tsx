@@ -40,7 +40,7 @@ export const NoteFromUs: React.FC = () => {
             <div className="mt-8">
               <p className="text-gray-300 font-sans tracking-widest uppercase text-xs">
                 With love always, <br/>
-                <span className="font-display text-[#D4AF37] text-3xl mt-4 inline-block capitalize" style={{ fontFamily: "'Great Vibes', cursive" }}>Imalsha &amp; Isuru</span>
+                <span className="font-display text-[#D4AF37] text-3xl mt-4 inline-block capitalize" style={{ fontFamily: "'Great Vibes', cursive" }}>Oshini &amp; Uthum</span>
               </p>
             </div>
           </div>

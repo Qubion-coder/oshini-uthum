@@ -3,12 +3,11 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Music, Music2, Volume2, VolumeX } from 'lucide-react';
 import { FloatingPetals } from './components/FloatingPetals';
 
+
 import { Countdown } from './components/Countdown';
 import { HappyCouple } from './components/HappyCouple';
 import { HomecomingDetails } from './components/HomecomingDetails';
-import { DressCode } from './components/DressCode';
-import { ColorPalette } from './components/ColorPalette';
-import { NoteFromUs } from './components/NoteFromUs';
+
 import { ClosingCTA } from './components/ClosingCTA';
 // Removed Timeline import
 
@@ -18,6 +17,7 @@ import { IntroVideo } from './components/IntroVideo';
 import { IntroOverlay } from './components/IntroOverlay';
 
 import { HeroContent } from './components/HeroContent';
+import { QuoteSection } from './components/QuoteSection';
 import { CornerFlowers } from './components/CornerFlowers';
 import { Admin } from './components/Admin';
 
@@ -31,7 +31,7 @@ export default function App() {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const weddingDate = new Date('2026-09-21T17:15:00');
+  const weddingDate = new Date('2027-07-10T15:00:00');
 
   const startMusic = () => {
     if (audioRef.current && !isMusicPlaying) {
@@ -123,21 +123,17 @@ export default function App() {
 
             <HeroContent />
 
+            <QuoteSection />
+
             <Countdown targetDate={weddingDate} />
 
             <HappyCouple />
 
             <HomecomingDetails />
 
-            <DressCode />
-
-            <ColorPalette />
-
-            <NoteFromUs />
+            <RSVPForm />
 
             <ClosingCTA />
-
-            <RSVPForm />
 
             <Footer />
           </motion.main>

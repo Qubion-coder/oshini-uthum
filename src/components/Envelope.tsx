@@ -79,9 +79,9 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onComplete }) => {
                 </div>
 
                 <h2 className="text-3xl sm:text-5xl font-display font-medium text-[#4a5770] tracking-tight leading-[1.1] mb-2 sm:mb-3 drop-shadow-sm">
-                  Dimalka <br />
+                  Oshini <br />
                   <span className="text-xl sm:text-3xl text-[#cccccc] italic font-light my-1 block">&</span>
-                  Dinindu
+                  Uthum
                 </h2>
 
                 <div className="w-16 sm:w-24 h-[2px] bg-gradient-to-r from-transparent via-[#cccccc] to-transparent mx-auto my-3 sm:my-5" />

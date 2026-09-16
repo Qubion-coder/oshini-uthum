@@ -2,6 +2,7 @@ type SheetName = 'rsvp' | 'wishes';
 
 type SheetPayload = Record<string, string | number>;
 
+// RSVP and Wish save URL
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbymi6JvA4WL-xhbwaM-egH_5mejcxBp5KzZmdtR9tfNmxCAcEQYh7byrw1TWU9y5L1J8g/exec";
 
 export async function submitToGoogleSheet(sheet: SheetName, payload: SheetPayload): Promise<void> {
