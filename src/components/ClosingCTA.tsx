@@ -14,22 +14,22 @@ export const ClosingCTA: React.FC = () => {
   return (
     <section className="w-full h-full py-32 relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/03s.jpg" alt="Romantic sunset" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#877f74] via-[#877f74]/70 to-[#877f74] text-[#877f74]/80"></div>
+        <img src="/WhatsApp Image 2026-09-22 at 03.18.02.jpeg" alt="Romantic sunset" className="h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#877f74]/70 via-[#877f74]/30 to-[#877f74]/70"></div>
       </div>
       
       <div className="relative z-10 container px-4 md:px-6 mx-auto text-center">
         <motion.div 
-          className="max-w-4xl mx-auto text-white space-y-8 font-tenorsans"
+          className="max-w-4xl mx-auto text-black space-y-8 font-tenorsans"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
           <div className="flex items-center justify-center space-x-4 mb-8 font-tenorsans">
-            <Heart className="h-8 w-8 text-[#faf9f6]" strokeWidth={1.5} />
-            <Sparkles className="h-6 w-6 text-[#faf9f6]" strokeWidth={1.5} />
-            <Heart className="h-8 w-8 text-[#faf9f6]" strokeWidth={1.5} />
+            <Heart className="h-8 w-8 text-black" strokeWidth={1.5} />
+            <Sparkles className="h-6 w-6 text-black" strokeWidth={1.5} />
+            <Heart className="h-8 w-8 text-black" strokeWidth={1.5} />
           </div>
           
           <h2 className="text-5xl md:text-6xl font-tenorsans leading-tight">
@@ -37,20 +37,22 @@ export const ClosingCTA: React.FC = () => {
           </h2>
           
           <p className="text-2xl leading-relaxed opacity-90 font-tenorsans">
-            Thank you for being part of our love story. Your presence will make our wedding day absolutely perfect.
+            Forever begins now, and we're so grateful you were here to celebrate with us.
+            <br /><br />
+            Thank you for joining us in this unforgettable celebration of love.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
             <button 
               onClick={scrollToRSVP}
-              className="inline-flex items-center justify-center whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 bg-white text-[#877f74] hover:bg-[#fbf4ef] rounded-full px-12 py-6 text-xl font-medium shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center justify-center whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 bg-white text-black hover:bg-[#fbf4ef] rounded-full px-12 py-6 text-xl font-medium shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
             >
               <Heart className="mr-3 h-6 w-6" strokeWidth={1.5} />
               RSVP with Love
             </button>
             <button 
               onClick={scrollToDetails}
-              className="inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 border-2 border-white text-white hover:bg-white/20 rounded-full px-12 py-6 text-xl font-medium backdrop-blur-sm"
+              className="inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 border-2 border-black text-black hover:bg-black/10 rounded-full px-12 py-6 text-xl font-medium backdrop-blur-sm"
             >
               <List className="mr-3 h-6 w-6" strokeWidth={1.5} />
               Wedding Details
