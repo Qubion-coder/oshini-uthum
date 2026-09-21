@@ -64,7 +64,7 @@ export const HomecomingDetails: React.FC = () => {
                   href="https://maps.app.goo.gl/3PYwwf7r7UbDyC4h8"
                 >
                   <MapPin className="h-3 w-3" />
-                  <span>ETERNAL VOWS CHAPEL</span>
+                  <span>View Location</span>
                 </a>
               </div>
             </div>
