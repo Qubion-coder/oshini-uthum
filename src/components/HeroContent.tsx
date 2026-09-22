@@ -22,9 +22,9 @@ export const HeroContent: React.FC = () => {
         <picture>
           <source media="(min-width: 1024px)" srcSet="/hero_bg.png" />
           <source media="(min-width: 640px)" srcSet="/hero_bg.png" />
-          <img src="/hero_bg.png" alt="Couple" className="w-full h-full object-cover opacity-60" />
+          <img src="/hero_bg.png" alt="Couple" className="w-full h-full object-cover" />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#877f74]/10 via-[#877f74]/50 to-[#877f74]/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-[#877f74]/70"></div>
       </div>
 
       <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-full max-w-6xl px-4 z-20">
@@ -46,15 +46,15 @@ export const HeroContent: React.FC = () => {
         <div className="flex flex-col items-center gap-6 text-center mt-auto">
           {guestNameString && (
             <motion.div 
-              className="flex flex-col items-center justify-center mb-6 bg-white/10 px-8 py-4 rounded-2xl backdrop-blur-sm border border-white/30"
+              className="flex flex-col items-center justify-center mb-6 bg-white/20 px-10 py-5 rounded-2xl backdrop-blur-md border-2 border-white/50 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] mb-2 font-tenorsans text-white drop-shadow-md text-center">
+              <p className="text-[10px] sm:text-xs uppercase tracking-[0.4em] mb-3 font-tenorsans text-white drop-shadow-md text-center">
                 We cordially invite
               </p>
-              <p className="font-serif text-2xl sm:text-3xl text-white whitespace-nowrap text-center drop-shadow-lg">
+              <p className="font-serif text-3xl sm:text-4xl text-white whitespace-nowrap text-center drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(255,255,255,0.4)' }}>
                 {guestNameString}
               </p>
             </motion.div>

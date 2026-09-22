@@ -4,7 +4,12 @@ import { Calendar, Heart } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export const RSVPForm: React.FC = () => {
-  const [name, setName] = useState('');
+  const searchParams = new URLSearchParams(window.location.search);
+  const urlPrefix = searchParams.get('prefix') || '';
+  const urlName = searchParams.get('name') || '';
+  const autoName = (urlPrefix && urlName) ? `${urlPrefix} ${urlName}` : urlName;
+
+  const [name, setName] = useState(autoName);
   const [attending, setAttending] = useState('');
   const [guests, setGuests] = useState(1);
   const [message, setMessage] = useState('');
@@ -73,12 +78,12 @@ export const RSVPForm: React.FC = () => {
               <img src="/03s.jpg" alt="Wedding RSVP" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
-            <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl max-w-sm border border-[#ecebe7]">
-              <div className="flex items-center space-x-3 text-gray-900 mb-3">
-                <Heart className="h-6 w-6" strokeWidth={1.5} />
+            <div className="bg-white p-6 rounded-2xl shadow-xl border border-[#ecebe7] mt-5">
+              <div className="flex items-center space-x-3 text-gray-900 mb-2">
+                <Heart className="h-5 w-5" strokeWidth={1.5} />
                 <span className="font-semibold text-lg font-tenorsans">Save the Date!</span>
               </div>
-              <p className="text-gray-700 leading-relaxed text-justify font-sans">
+              <p className="text-gray-700 leading-relaxed text-justify font-sans text-sm">
                 Your presence will make our wedding day complete. We're so excited to celebrate this special moment with you!
               </p>
             </div>

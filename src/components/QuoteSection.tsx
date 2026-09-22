@@ -12,9 +12,9 @@ export const QuoteSection: React.FC = () => {
         transition={{ duration: 1 }}
       >
         <img 
-          src="/01.jpg" 
+          src="/WhatsApp Image 2026-09-22 at 02.48.11.jpeg" 
           alt="Oshini &amp; Uthum" 
-          className="w-full h-full object-cover grayscale contrast-125 brightness-50 transition-all duration-700 hover:grayscale-0 hover:brightness-90" 
+          className="w-full h-full object-cover grayscale contrast-110 brightness-70 transition-all duration-700 hover:grayscale-0 hover:brightness-100" 
         />
       </motion.div>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pointer-events-none z-10">
