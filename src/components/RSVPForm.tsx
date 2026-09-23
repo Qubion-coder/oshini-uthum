@@ -75,7 +75,7 @@ export const RSVPForm: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative h-[500px] overflow-hidden rounded-3xl shadow-2xl">
-              <img src="/03s.jpg" alt="Wedding RSVP" className="w-full h-full object-cover" />
+              <img src="/03s.jpg" alt="Wedding RSVP" className="w-full h-full object-cover object-bottom scale-105 origin-bottom" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-xl border border-[#ecebe7] mt-5">
