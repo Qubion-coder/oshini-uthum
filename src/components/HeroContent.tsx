@@ -3,13 +3,6 @@ import { motion } from 'motion/react';
 import { ChevronDown, Menu } from 'lucide-react';
 
 export const HeroContent: React.FC = () => {
-  const searchParams = new URLSearchParams(window.location.search);
-  const prefix = searchParams.get('prefix');
-  const name = searchParams.get('name');
-
-  const guestNameString = (prefix || name) 
-    ? `${prefix ? prefix + ' ' : ''}${name || ''}`.trim() 
-    : '';
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -44,21 +37,6 @@ export const HeroContent: React.FC = () => {
       <div className="relative z-10 w-full h-full flex flex-col justify-between items-center px-4 py-24 md:py-32">
         
         <div className="flex flex-col items-center gap-6 text-center mt-auto">
-          {guestNameString && (
-            <motion.div 
-              className="flex flex-col items-center justify-center mb-6 bg-white/20 px-10 py-5 rounded-2xl backdrop-blur-md border-2 border-white/50 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <p className="text-[10px] sm:text-xs uppercase tracking-[0.4em] mb-3 font-tenorsans text-white drop-shadow-md text-center">
-                We cordially invite
-              </p>
-              <p className="font-serif text-3xl sm:text-4xl text-white whitespace-nowrap text-center drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(255,255,255,0.4)' }}>
-                {guestNameString}
-              </p>
-            </motion.div>
-          )}
 
           <motion.div 
             className="inline-flex items-center space-x-2 p-4 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm"

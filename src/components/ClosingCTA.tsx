@@ -32,11 +32,7 @@ export const ClosingCTA: React.FC = () => {
             <Heart className="h-8 w-8 text-black" strokeWidth={1.5} />
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-tenorsans leading-tight">
-            We Can't Wait to Celebrate with You!
-          </h2>
-          
-          <p className="text-2xl leading-relaxed opacity-90 font-tenorsans">
+          <p className="text-2xl md:text-4xl leading-relaxed opacity-90 font-tenorsans font-bold">
             Forever begins now, and we're so grateful you were here to celebrate with us.
             <br /><br />
             Thank you for joining us in this unforgettable celebration of love.
