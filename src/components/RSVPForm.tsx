@@ -149,16 +149,22 @@ export const RSVPForm: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-gray-700 font-medium mb-2 font-tenorsans">Number of Guests</label>
-                    <input 
-                      type="number" 
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 font-tenorsans focus:outline-none focus:ring-2 focus:ring-[#877f74] bg-white" 
-                      min="1" 
-                      max="10" 
-                      name="guests" 
-                      value={guests}
-                      onChange={(e) => setGuests(parseInt(e.target.value) || 1)}
-                      disabled={isSubmitting || attending === 'no'}
-                    />
+                    <div className="relative">
+                      <select 
+                        name="guests" 
+                        value={guests}
+                        onChange={(e) => setGuests(parseInt(e.target.value) || 1)}
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 font-tenorsans appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-[#877f74] bg-white"
+                        disabled={isSubmitting || attending === 'no'}
+                      >
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+                          <option key={num} value={num}>{num}</option>
+                        ))}
+                      </select>
+                      <svg className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
