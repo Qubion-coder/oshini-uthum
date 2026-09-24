@@ -7,9 +7,18 @@ export const RSVPForm: React.FC = () => {
   const searchParams = new URLSearchParams(window.location.search);
   const urlPrefix = searchParams.get('prefix') || '';
   const urlName = searchParams.get('name') || '';
+  
+  let maxGuests = 1;
+  const lowerPrefix = urlPrefix.toLowerCase();
+  if (lowerPrefix.includes('family')) {
+    maxGuests = 6;
+  } else if (lowerPrefix.includes('and') || lowerPrefix.includes('&')) {
+    maxGuests = 2;
+  }
+
   let autoName = urlName;
   if (urlPrefix && urlName) {
-    if (urlPrefix.toLowerCase() === 'family') {
+    if (lowerPrefix === 'family') {
       autoName = `${urlName} and family`;
     } else {
       autoName = `${urlPrefix} ${urlName}`;
@@ -157,7 +166,7 @@ export const RSVPForm: React.FC = () => {
                         className="w-full border border-gray-300 rounded-lg px-4 py-3 font-tenorsans appearance-none pr-10 focus:outline-none focus:ring-2 focus:ring-[#877f74] bg-white"
                         disabled={isSubmitting || attending === 'no'}
                       >
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+                        {Array.from({ length: maxGuests }, (_, i) => i + 1).map(num => (
                           <option key={num} value={num}>{num}</option>
                         ))}
                       </select>
