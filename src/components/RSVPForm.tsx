@@ -7,7 +7,14 @@ export const RSVPForm: React.FC = () => {
   const searchParams = new URLSearchParams(window.location.search);
   const urlPrefix = searchParams.get('prefix') || '';
   const urlName = searchParams.get('name') || '';
-  const autoName = (urlPrefix && urlName) ? `${urlPrefix} ${urlName}` : urlName;
+  let autoName = urlName;
+  if (urlPrefix && urlName) {
+    if (urlPrefix.toLowerCase() === 'family') {
+      autoName = `${urlName} and family`;
+    } else {
+      autoName = `${urlPrefix} ${urlName}`;
+    }
+  }
 
   const [name, setName] = useState(autoName);
   const [attending, setAttending] = useState('');

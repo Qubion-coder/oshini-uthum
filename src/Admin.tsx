@@ -18,9 +18,18 @@ export const Admin = () => {
 
   const generateMessage = () => {
     const link = generateLink();
-    const nameStr = guestName.trim() ? ` ${guestName.trim()}` : '';
+    const trimmedName = guestName.trim();
     
-    return `Dear ${prefix}${nameStr} ❤️
+    let greetingName = '';
+    if (prefix.toLowerCase() === 'family') {
+      greetingName = trimmedName ? `${trimmedName} and Family` : 'Family';
+    } else if (prefix === 'Dear') {
+      greetingName = trimmedName;
+    } else {
+      greetingName = `${prefix}${trimmedName ? ` ${trimmedName}` : ''}`;
+    }
+    
+    return `Dear ${greetingName} ❤️
 
 With joyful hearts, we warmly invite you to celebrate one of the most special days of our lives as we begin our journey together.
 
